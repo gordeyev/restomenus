@@ -1,0 +1,13 @@
+<p>
+	<a href="{% url 'home' %}">Главная</a>
+</p>
+
+{% if menu_ru %}
+<ol>
+	{% for url in menu_ru %}
+		<li>{{ url }}</li>
+	{% endfor %}
+</ol>
+{% else %}
+	<h4>There are no URLs</h4>
+{% endif %}
